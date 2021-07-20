@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <input type="text" id="inputm" placeholder="Nhập giá trị Meter">
+  <button type="button" onclick="converseF()">Chuyển đổi</button>
+  <br>
+  <p id="hienthi"></p>
+  <br>
+  <input type="text" id="inputF" placeholder="nhập giá trị Feet">
+  <button type="button" onclick="converseM()">Chuyển đổi</button>
+  <p id="hienthiM"></p>
+<script>
+  function converseToFeet(a){
+    let feet = a*3.279;
+    return feet;
+  }
+  function converseF(){
+    let input=parseInt(document.getElementById("inputm").value);
+    let display=converseToFeet(input)
+    document.getElementById("hienthi").innerHTML= display +"Feet" ;
+  }
+
+  function converseToMeter(b){
+    let meter=b*0.305;
+    return meter;
+  }
+  function converseM(){
+    let input1=parseInt(document.getElementById("inputF").value);
+    let display2=converseToMeter(input1);
+    document.getElementById("hienthiM").innerHTML= display2+ "Meter";
+  }
+
+
+</script>
+</body>
+</html>
